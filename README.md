@@ -12,22 +12,15 @@ No installation required, use directly! 无需任何安装，直接使用！
 <?php
 use MilkID\IdGenerator;
 
-// 基本使用
-$generator = new IdGenerator();
-$id1 = $generator->createId();
-
-// 带配置的使用
 $generator = new IdGenerator([
-    'timestamp' => true,     // 包含时间戳
-    'fingerprint' => true,   // 包含指纹
-    'hyphen' => true,        // 使用连字符
-    'length' => 24           // ID总长度
+    'length' => 24,        // Total length of ID
+    'timestamp' => true,   // Include timestamp
+    'fingerprint' => true, // Include fingerprint
+    'hyphen' => true,      // Add hyphens
+    'sequential' => true   // Ensure sequential IDs within same millisecond
 ]);
 
-$id2 = $generator->createId('user123');
-$id3 = $generator->createId('another-user');
-
-echo $id2; // 输出带有时间戳和指纹的唯一ID
+$id = $generator->createId('your-unique-fingerprint');
 ```
 
 # Option 配置选项
