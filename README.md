@@ -30,6 +30,13 @@ $id = $generator->createId('your-unique-fingerprint');
 
 # Option 配置选项
 
+- `timestamp`: Whether to include the timestamp (default: false)
+- `fingerprint`: Whether to include the fingerprint (default: false)
+- `hyphen`: Whether to add hyphens (default: false)
+- `sequential`: Whether to use sequential generation (default: true)
+- `length`: The total length of the ID (default: 24)
+- `magicNumber`: The base value of the timestamp (default: 733882188971)
+
 - `timestamp`: 是否包含时间戳 (默认: false)
 - `fingerprint`: 是否包含指纹 (默认: false)
 - `hyphen`: 是否添加连字符 (默认: false)
