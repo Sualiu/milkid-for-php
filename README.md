@@ -13,11 +13,11 @@ No installation required, use directly! 无需任何安装，直接使用！
 use MilkID\IdGenerator;
 
 $generator = new IdGenerator([
-    'length' => 24,        // Total length of ID
-    'timestamp' => true,   // Include timestamp
-    'fingerprint' => true, // Include fingerprint
-    'hyphen' => true,      // Add hyphens
-    'sequential' => true   // Ensure sequential IDs within same millisecond
+    'length' => 24,
+    'timestamp' => true,
+    'fingerprint' => true,
+    'hyphen' => true,
+    'sequential' => true   
 ]);
 
 $id = $generator->createId('your-unique-fingerprint');
