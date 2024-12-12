@@ -147,7 +147,7 @@ class IdGenerator {
     }
 
     private function xxh64(string $input): string {
-        // 简单的哈希实现，可以替换为更复杂的实现
+        // 简单的哈希实现，可以替换为更复杂的实现，但那实在太慢了（
         return bcadd(base_convert(hash('xxh64', $input), 16, 10), '0');
     }
 }
